@@ -14,7 +14,7 @@
     </parent>
     <groupId>io.mh</groupId>
     <artifactId>sfg-pet-clinic</artifactId>
-    <version>0.0.5-SNAPSHOT</version>
+    <version>0.0.5</version>
     <name>sfg-pet-clinic</name>
     <description>Pet Clinic Project</description>
 
@@ -33,6 +33,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <configuration>
                     <goals>install</goals>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
                     <checkModificationExcludes>
                         <checkModificationExclude>pom.xml</checkModificationExclude>
                     </checkModificationExcludes>
@@ -43,7 +44,7 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/HluhovMax/sfg-pet-clinic.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>sfg-pet-clinic-0.0.5</tag>
   </scm>
 
 </project>
