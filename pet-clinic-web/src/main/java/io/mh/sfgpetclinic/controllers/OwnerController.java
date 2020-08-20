@@ -5,14 +5,13 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class VetController {
+public class OwnerController {
 
-
-	@GetMapping({"/vets", "/vets/index", "/vets/index.html"})
-	public String listVets(Model model) {
+	@GetMapping({"/owners", "/owners/index", "/owners/index.html"})
+	public String listOwners(Model model) {
 
 		model.addAttribute("title", "Index Page");
 
-		return "vets/index";
+		return "owners/index";
 	}
 }
