@@ -20,7 +20,7 @@ public class VetController {
 	@GetMapping()
 	public String listVets(Model model) {
 		model.addAttribute("title", "List of Vets");
-//		model.addAttribute(VETS, vetService.findAll());
+		model.addAttribute(VETS, vetService.findAll());
 		return "vets/index";
 	}
 }
