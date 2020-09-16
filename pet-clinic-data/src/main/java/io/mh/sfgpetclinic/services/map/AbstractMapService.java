@@ -1,13 +1,13 @@
 package io.mh.sfgpetclinic.services.map;
 
-import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 
 public abstract class AbstractMapService<T, ID> {
 
-	private Map<ID, T> map = new HashMap<>();
+	private final Map<ID, T> map = new LinkedHashMap<>();
 
 	protected Set<T> findAllInMap() {
 		return new HashSet<>(map.values());

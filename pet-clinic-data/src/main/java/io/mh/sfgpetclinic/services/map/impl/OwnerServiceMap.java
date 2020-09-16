@@ -3,6 +3,10 @@ package io.mh.sfgpetclinic.services.map.impl;
 import io.mh.sfgpetclinic.model.Owner;
 import io.mh.sfgpetclinic.services.OwnerService;
 import io.mh.sfgpetclinic.services.map.OwnerAbstractMapService;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +20,9 @@ public class OwnerServiceMap extends OwnerAbstractMapService implements OwnerSer
 
 	@Override
 	public Set<Owner> findAll() {
-		return super.findAllInMap();
+		List<Owner> owners = new ArrayList<>(super.findAllInMap());
+		owners.sort(Comparator.comparing(Owner::getLastName, String::compareTo));
+		return new HashSet<>(owners);
 	}
 
 	@Override
