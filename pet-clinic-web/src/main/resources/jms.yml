@@ -1,0 +1,5 @@
+mh:
+  jms:
+    username: JMS Username
+    password: jpass
+    url: jurl
