@@ -1,0 +1,17 @@
+mh:
+  jms:
+    username: JMS Username
+    password: jpass
+    url: jurl
+---
+spring:
+  profiles: de
+mh:
+  jms:
+    username: JMS Username $$$$$$
+---
+spring:
+  profiles: es
+mh:
+  jms:
+    username: JMS Username SPAIN
