@@ -32,7 +32,7 @@ public class OwnerServiceMap extends OwnerAbstractMapService implements OwnerSer
 
 	@Override
 	public Owner save(Owner owner) {
-		return super.saveToMap(owner.getId(), owner);
+		return super.saveToMap(owner);
 	}
 
 	@Override

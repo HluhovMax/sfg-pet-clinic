@@ -20,7 +20,7 @@ public class VetServiceMap extends VetAbstractMapService implements VetService {
 
 	@Override
 	public Vet save(Vet vet) {
-		return super.saveToMap(vet.getId(), vet);
+		return super.saveToMap(vet);
 	}
 
 	@Override

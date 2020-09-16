@@ -28,7 +28,6 @@ public class DataLoader implements CommandLineRunner {
 		ownerService.save(
 			new Owner
 				.Builder()
-				.id(1L)
 				.firstName("Michael")
 				.lastName("Weston")
 				.build()
@@ -37,7 +36,6 @@ public class DataLoader implements CommandLineRunner {
 		ownerService.save(
 			new Owner
 				.Builder()
-				.id(2L)
 				.firstName("Fiona")
 				.lastName("Glenanne")
 				.build()
@@ -47,7 +45,6 @@ public class DataLoader implements CommandLineRunner {
 		vetService.save(
 			new Vet
 				.Builder()
-				.id(1L)
 				.firstName("Sam")
 				.lastName("Axe")
 				.build()
@@ -56,7 +53,6 @@ public class DataLoader implements CommandLineRunner {
 		vetService.save(
 			new Vet
 				.Builder()
-				.id(2L)
 				.firstName("George")
 				.lastName("Mayweather")
 				.build()
