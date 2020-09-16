@@ -1,7 +1,6 @@
 package io.mh.sfgpetclinic.propertysource.config;
 
 import io.mh.sfgpetclinic.propertysource.model.FakeDataSource;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -13,8 +12,7 @@ import org.springframework.core.env.Environment;
 @PropertySource("classpath:datasource.properties")
 public class PropertyConfig {
 
-	@Autowired
-	Environment environment;
+	final Environment environment;
 
 	@Value("${mh.username}")
 	String user;
@@ -22,6 +20,10 @@ public class PropertyConfig {
 	String password;
 	@Value("${mh.db.url}")
 	String url;
+
+	public PropertyConfig(Environment environment) {
+		this.environment = environment;
+	}
 
 	@Bean
 	public FakeDataSource fakeDataSource() {
