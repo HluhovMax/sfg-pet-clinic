@@ -1,7 +1,8 @@
-package io.mh.sfgpetclinic.services.map;
+package io.mh.sfgpetclinic.services.map.impl;
 
 import io.mh.sfgpetclinic.model.Pet;
 import io.mh.sfgpetclinic.services.PetService;
+import io.mh.sfgpetclinic.services.map.PetAbstractMapService;
 import java.util.Set;
 import org.springframework.stereotype.Service;
 
@@ -31,5 +32,10 @@ public class PetServiceMap extends PetAbstractMapService implements PetService {
 	@Override
 	public void delete(Pet pet) {
 		super.deleteFromMap(pet);
+	}
+
+	@Override
+	public int count() {
+		return super.count();
 	}
 }

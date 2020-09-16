@@ -6,5 +6,5 @@ import lombok.Data;
 @Data
 public class BaseEntity implements Serializable {
 
-	private Long id;
+	protected Long id;
 }

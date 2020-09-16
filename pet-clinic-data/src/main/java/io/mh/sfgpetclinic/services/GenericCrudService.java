@@ -13,4 +13,6 @@ public interface GenericCrudService<T, ID> {
 	void deleteById(ID id);
 
 	void delete(T object);
+
+	int count();
 }

@@ -7,27 +7,31 @@ import java.util.Set;
 
 public abstract class AbstractMapService<T, ID> {
 
-	protected Map<ID, T> map = new HashMap<>();
+	private Map<ID, T> map = new HashMap<>();
 
-	Set<T> findAllInMap() {
+	protected Set<T> findAllInMap() {
 		return new HashSet<>(map.values());
 	}
 
-	T findByIdInMap(ID id) {
+	protected T findByIdInMap(ID id) {
 		return map.get(id);
 	}
 
-	T saveToMap(ID id, T object) {
+	protected T saveToMap(ID id, T object) {
 		map.put(id, object);
 
 		return object;
 	}
 
-	void deleteByIdFromMap(ID id) {
+	protected void deleteByIdFromMap(ID id) {
 		map.remove(id);
 	}
 
-	void deleteFromMap(T object) {
+	protected void deleteFromMap(T object) {
 		map.entrySet().removeIf(entry -> entry.getValue().equals(object));
+	}
+
+	protected int count() {
+		return this.map.size();
 	}
 }

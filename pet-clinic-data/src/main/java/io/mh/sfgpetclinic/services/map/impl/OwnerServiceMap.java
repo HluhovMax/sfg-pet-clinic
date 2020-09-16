@@ -1,7 +1,8 @@
-package io.mh.sfgpetclinic.services.map;
+package io.mh.sfgpetclinic.services.map.impl;
 
 import io.mh.sfgpetclinic.model.Owner;
 import io.mh.sfgpetclinic.services.OwnerService;
+import io.mh.sfgpetclinic.services.map.OwnerAbstractMapService;
 import java.util.Set;
 import org.springframework.stereotype.Service;
 
@@ -36,5 +37,10 @@ public class OwnerServiceMap extends OwnerAbstractMapService implements OwnerSer
 	@Override
 	public void delete(Owner owner) {
 		super.deleteFromMap(owner);
+	}
+
+	@Override
+	public int count() {
+		return super.count();
 	}
 }
