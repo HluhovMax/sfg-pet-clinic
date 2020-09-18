@@ -10,19 +10,7 @@ import org.springframework.context.ApplicationContext;
 public class SfgPetClinicApplication {
 
 	public static void main(String[] args) {
-		ApplicationContext ctx = SpringApplication.run(SfgPetClinicApplication.class, args);
-
-		FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
-		System.out.println("********* data source info *********");
-		System.out.println("user: " + fakeDataSource.getUser());
-		System.out.println("password: " + fakeDataSource.getPassword());
-		System.out.println("url: " + fakeDataSource.getUrl());
-
-		FakeJmsBroker jmsBroker = ctx.getBean(FakeJmsBroker.class);
-		System.out.println("********* jms info *********");
-		System.out.println("user: " + jmsBroker.getUser());
-		System.out.println("password: " + jmsBroker.getPassword());
-		System.out.println("url: " + jmsBroker.getUrl());
+		SpringApplication.run(SfgPetClinicApplication.class, args);
 	}
 
 }
